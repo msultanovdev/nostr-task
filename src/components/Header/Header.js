@@ -19,7 +19,7 @@ const Header = () => {
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
                 <Nav.Link href="#home">Stats</Nav.Link>
-                <NavDropdown title="Top" id="basic-nav-dropdown">
+                <NavDropdown title="Top " id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">People</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">
                         Posts
@@ -32,7 +32,7 @@ const Header = () => {
                         Audio
                     </NavDropdown.Item>
                 </NavDropdown>
-                <NavDropdown title="Products" id="basic-nav-dropdown">
+                <NavDropdown title="Products " id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Stats</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">
                         API
@@ -50,7 +50,7 @@ const Header = () => {
                     <NavDropdown.Item href="#action/3.1">RSS feeds</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.1">Search bots</NavDropdown.Item>
                 </NavDropdown>
-                <NavDropdown title="About" id="basic-nav-dropdown">
+                <NavDropdown title="About " id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">About</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.1">Terms</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.1">Privacy</NavDropdown.Item>
