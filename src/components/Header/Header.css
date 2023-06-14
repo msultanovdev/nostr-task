@@ -1,0 +1,12 @@
+.header-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+.logo-img {
+    margin-right: 5px;
+    display: inline;
+    width: 26px;
+    height: 26px;
+}
