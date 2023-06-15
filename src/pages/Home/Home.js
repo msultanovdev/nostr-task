@@ -4,6 +4,7 @@ import Search from '../../components/Search/Search';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import ProfileItem from '../../components/ProfileItem/ProfileItem';
 
 const Home = () => {
     return(
@@ -13,6 +14,7 @@ const Home = () => {
                 <div>
                     <Header />
                     <Search />
+                    <ProfileItem />
                 </div>
             </Col>
         </Row>
