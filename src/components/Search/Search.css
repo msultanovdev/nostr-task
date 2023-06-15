@@ -1,5 +1,6 @@
 #search-input {
     border-radius: 5px;
+    position: relative;
 }
 
 #dropdown-basic {
@@ -25,4 +26,12 @@
 #search-btn:hover {
     background-color: var(--bg-secondary-color);
     color: white;
+}
+
+.loader {
+    width: 35px;
+    background-color: #6c757d17;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
