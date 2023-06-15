@@ -5,11 +5,11 @@ a {
 .profile {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin-bottom: 20px;
+    max-width: 100%;
+    margin-bottom: 1.1rem;
 }
 .profile a {
-    margin-bottom: 5px;
+    margin-bottom: .3rem;
     padding: 0;
 }
 .profile-info__image {
@@ -29,15 +29,17 @@ a {
     display: flex;
 }
 .profile-info__hero {
-    height: 90px;
-    margin-left: 8px;
+    min-height: 90px;
+    margin-left: .5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .profile-info__hero-name {
     text-decoration: none;
-    font-size: 19px;
+    font-size: 1.2rem;
     color: var(--bg-secondary-color);
-    margin-right: 7px;
+    margin-right: .45rem;
     transition: all .3s;
 }
 .profile-info__hero-name:hover {
@@ -67,23 +69,24 @@ a {
 }
 .profile-info__hero-keys a {
     text-decoration: none;
-    margin-right: 8px;
+    margin-right: 0.5rem;
     color: var(--bg-secondary-color);
     cursor: pointer;
 }
 .profile-info__hero-keys {
-    font-size: 16.8px;
+    font-size: 1.05rem;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     color: var(--bg-secondary-color);
 }
 .profile-info__hero-keys-mail {
     display: flex;
     align-items: center;
-    margin-right: 8px;
+    margin-right: .5rem;
 }
 .profile-info__hero-sats {
-    font-size: 16.8px;
+    font-size: 1.05rem;
 }
 .profile-info__hero-sats span {
     font-weight: 700;
@@ -91,7 +94,7 @@ a {
 .profile-info__hero-keys .profile-info__hero-keys-twitter {
     display: flex;
     align-items: center;
-    margin-right: 8px;
+    margin-right: .5rem;
     color: rgb(13,110,253);
     cursor: pointer;
     transition: all .3s;
@@ -111,21 +114,26 @@ a {
     position: relative;
 }
 .new-followers {
-    font-size: 12px;
+    font-size: .75rem;
     position: absolute;
     bottom: 9px;
 }
 .profile-content__control {
-    margin-top: 10px;
+    margin-top: .65rem;
 }
 #profile-buttons button {
-    font-size: 14px;
+    font-size: .85rem;
     padding: 4px 8px;
     background-color: transparent;
     color: var(--bg-secondary-color);
-    margin-right: 5px;
+    margin-right: .3rem;
 }
 #profile-buttons button:hover {
     background-color: var(--bg-secondary-color);
     color: white;
+}
+
+.profile-content__bio {
+    max-width: 100%;
+    word-break: break-all;
 }

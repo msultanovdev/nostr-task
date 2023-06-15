@@ -8,6 +8,7 @@ import ProfileItem from '../../components/ProfileItem/ProfileItem';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import {generatePrivateKey, getPublicKey} from 'nostr-tools';
+import { Button } from 'react-bootstrap';
 
 const Home = () => {
     const [profiles, setProfiles] = useState([]);
@@ -72,8 +73,21 @@ const Home = () => {
             <Row className="justify-content-lg-center">
                 <Col lg={9}>
                     <div>
-                        <Header />
                         <Search isLoading={isLoading} />
+                        <div className="home-hero">
+                            <h2 className="home-hero-title">Discover <span>Nostr</span></h2>
+                            <p className="home-hero-subtitle">Learn what is trending <span>today</span></p>
+                            <div className="home-hero__links">
+                                <Button>People</Button>
+                                <Button variant="link">Posts</Button>
+                                <Button variant="link">Zapped</Button>
+                                <Button variant="link">Links</Button>
+                                <Button variant="link">Hashtags</Button>
+                                <Button variant="link">Images</Button>
+                                <Button variant="link">Video</Button>
+                                <Button variant="link">Audio</Button>
+                            </div>
+                        </div>
                         <div className="home-profiles">
                             {
                                 fullProfiles && fullProfiles.length ? fullProfiles.map(profile => {
@@ -89,6 +103,7 @@ const Home = () => {
                                     />
                                 }) : 'Loading...'
                             }
+                            {fullProfiles && fullProfiles.length ? <a className="yesterday-trending">See who was trending yesterday →</a> : ''}
                         </div>
                     </div>
                 </Col>

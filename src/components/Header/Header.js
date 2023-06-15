@@ -4,21 +4,25 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
+import { Col, Row } from 'react-bootstrap';
 
 const Header = () => {
     return(
-        <Navbar expand="lg">
         <Container>
-            <Navbar.Brand href="#home" className="header-logo">
-                <img 
-                    src="https://nostr.band/android-chrome-192x192.png"
-                    className="logo-img"    
-                />
-                    Nostr.Band
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Row className="justify-content-lg-center">
+                <Col lg={9}>
+        <Navbar expand="lg">
+
+                <Navbar.Brand href="#home" className="header-logo">
+                    <img 
+                        src="https://nostr.band/android-chrome-192x192.png"
+                        className="logo-img"    
+                    />
+                        Nostr.Band
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
                 <Nav.Link href="#home">Stats</Nav.Link>
                 <NavDropdown title="Top " id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">People</NavDropdown.Item>
@@ -65,8 +69,12 @@ const Header = () => {
                 <Nav.Link href="#home">Login</Nav.Link>
             </Nav>
             </Navbar.Collapse>
+        </Navbar>
+
+            </Col>
+            </Row>
+
         </Container>
-    </Navbar>
     );
 }
 
