@@ -3,17 +3,15 @@ import Dropdown from "react-bootstrap/Dropdown";
 import {
   CheckCircle,
   Key,
-  ViewList,
   Twitter,
   ZoomIn,
   BoxArrowUpRight,
-  PersonFillAdd,
-  PersonAdd,
   PersonPlus,
   BookmarkPlus,
 } from "react-bootstrap-icons";
 import { Button } from "react-bootstrap";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const ProfileItem = ({
   img,
@@ -23,12 +21,22 @@ const ProfileItem = ({
   twitter,
   mail,
   newFollowersCount,
-  stats,
 }) => {
+  const [stats, setStats] = useState({});
   const splitedMail = mail && mail.split("");
   const findMailIndex = mail && splitedMail.findIndex((m) => m === "@");
   const mailName = mail && splitedMail.slice(0, findMailIndex).join("");
   const mailAdress = mail && splitedMail.slice(findMailIndex + 1).join("");
+
+  const fetchStats = async () => {
+    const { data } = await axios.get(
+      `https://api.nostr.band/v0/stats/profile/${pubKey}`
+    );
+    setStats(data.stats[pubKey]);
+  };
+  useEffect(() => {
+    fetchStats();
+  });
 
   return (
     <div className="profile">
