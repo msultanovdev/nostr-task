@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Form from 'react-bootstrap/Form';
 
 const Header = () => {
     return(
@@ -51,6 +52,12 @@ const Header = () => {
                     <NavDropdown.Item href="#action/3.1">Search bots</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="About " id="basic-nav-dropdown">
+                    <Form.Check
+                        style={{marginLeft: '16px', cursor: 'pointer'}}
+                        type="switch"
+                        id="custom-switch"
+                        label="Dark mode"
+                    />
                     <NavDropdown.Item href="#action/3.1">About</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.1">Terms</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.1">Privacy</NavDropdown.Item>
