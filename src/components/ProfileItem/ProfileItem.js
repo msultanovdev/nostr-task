@@ -12,7 +12,7 @@ import {
 import { Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { nip19, getPublicKey, generatePrivateKey } from "nostr-tools";
+import { nip19 } from "nostr-tools";
 
 const ProfileItem = ({
   img,
@@ -76,7 +76,7 @@ const ProfileItem = ({
             {twitter && (
               <a
                 className="profile-info__hero-keys-twitter"
-                href={`twitter.com/${twitter}`}
+                href={`https://twitter.com/${twitter}`}
               >
                 <Twitter />
                 {twitter}
