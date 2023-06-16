@@ -1,5 +1,4 @@
 import "./Home.css";
-import Header from "../../components/Header/Header";
 import Search from "../../components/Search/Search";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -7,7 +6,6 @@ import Col from "react-bootstrap/Col";
 import ProfileItem from "../../components/ProfileItem/ProfileItem";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { generatePrivateKey, getPublicKey } from "nostr-tools";
 import { Button } from "react-bootstrap";
 
 const Home = () => {
@@ -22,7 +20,7 @@ const Home = () => {
       );
       setProfiles(data.profiles);
     } catch (e) {
-      console.log(e);
+      console.error(e?.response?.data?.error);
     } finally {
       setIsLoading(false);
     }
