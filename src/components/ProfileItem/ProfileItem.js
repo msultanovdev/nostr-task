@@ -12,7 +12,7 @@ import {
 import { Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import {nip19, getPublicKey, generatePrivateKey} from 'nostr-tools'
+import { nip19, getPublicKey, generatePrivateKey } from "nostr-tools";
 
 const ProfileItem = ({
   img,
@@ -24,13 +24,11 @@ const ProfileItem = ({
   newFollowersCount,
 }) => {
   const [stats, setStats] = useState({});
-  const [npubKey, setNpubKey] = useState('');
+  const [npubKey, setNpubKey] = useState("");
   const splitedMail = mail && mail.split("");
   const findMailIndex = mail && splitedMail.findIndex((m) => m === "@");
   const mailName = mail && splitedMail.slice(0, findMailIndex).join("");
   const mailAdress = mail && splitedMail.slice(findMailIndex + 1).join("");
-
-
 
   const fetchStats = async () => {
     const { data } = await axios.get(
@@ -76,7 +74,10 @@ const ProfileItem = ({
               </a>
             )}
             {twitter && (
-              <a className="profile-info__hero-keys-twitter" href={`twitter.com/${twitter}`}>
+              <a
+                className="profile-info__hero-keys-twitter"
+                href={`twitter.com/${twitter}`}
+              >
                 <Twitter />
                 {twitter}
               </a>
